@@ -1,7 +1,7 @@
 package kdm;
 
 public class Variables {
-	private static String strConn = ".\\DB\\kdm_h2db";
+	private static String strConn = "L:\\eclipse\\workspace\\CC_Karaoke_Disc_Manager\\DB\\kdm_h2db";
 	private static String strUser = "Admin";
 	private static String strPassword = "";
 	private static String strAppName = "CC Karaoke Disc Manager";
