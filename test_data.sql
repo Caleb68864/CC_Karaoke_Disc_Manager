@@ -1,0 +1,15 @@
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('A','1','Running Gun','Marty Robbins','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('A','2','El Paso','Marty Robbins','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('A','3','Strawberry Roan','Marty Robbins','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('A','4','Big Iron','Marty Robbins','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('A','5','Old Red','Marty Robbins','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('B','1','Friends In Low Places','George Straight','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('B','2','Write This Down','George Straight','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('B','3','Monster','Skillet','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('B','4','Voodoo','Godsmack','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('B','5','Intro The Night','Santanna','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('C','1','I Need A Hero','Bonnie Tyler','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('C','2','Comatose','Skillet','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('C','3','I Stand Alone','Godsmack','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('C','4','Running Blind','Godsmack','Disc');
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('C','5','Utah Carol','Marty Robbins','Disc');

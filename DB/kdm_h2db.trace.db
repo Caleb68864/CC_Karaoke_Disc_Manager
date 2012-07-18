@@ -1,0 +1,15 @@
+07-18 09:50:47 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
+07-18 09:58:17 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
+07-18 09:59:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
+07-18 10:00:23 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
+07-18 10:04:27 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
