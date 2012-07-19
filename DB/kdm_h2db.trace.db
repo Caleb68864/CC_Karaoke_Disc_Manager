@@ -13,3 +13,73 @@ Select Disc_ID FROM tblDiscs [42102-166]
 07-18 10:04:27 jdbc[2]: exception
 org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
 Select Disc_ID FROM tblDiscs [42102-166]
+07-18 16:33:32 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
+07-18 16:33:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs WHERE UPPER(Disc_Disc) Like UPPER('%1%'); [42102-166]
+07-18 16:33:35 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs WHERE UPPER(Disc_Disc) Like UPPER('%1%') AND UPPER(Disc_Track) Like UPPER('%1%'); [42102-166]
+07-18 16:33:36 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs WHERE UPPER(Disc_Disc) Like UPPER('%1%') AND UPPER(Disc_Track) Like UPPER('%1%') AND UPPER(Disc_Title) Like UPPER('%1%'); [42102-166]
+07-18 16:33:37 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs WHERE UPPER(Disc_Disc) Like UPPER('%1%') AND UPPER(Disc_Track) Like UPPER('%1%') AND UPPER(Disc_Title) Like UPPER('%1%') AND UPPER(Disc_Artist) Like UPPER('%1%'); [42102-166]
+07-18 16:33:56 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('1',1,'1','1','Disc'); [42102-166]
+07-18 16:33:56 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
+07-18 16:34:00 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs WHERE UPPER(Disc_Disc) Like UPPER('%1%'); [42102-166]
+07-18 16:34:01 jdbc[10]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs WHERE UPPER(Disc_Disc) Like UPPER('%1%'); [42102-166]
+07-18 16:34:15 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
+07-18 16:34:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ('1',1,'1','1',''); [42102-166]
+07-18 16:34:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" not found; SQL statement:
+Select Disc_ID FROM tblDiscs [42102-166]
+07-18 16:42:13 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "IF[*] NOT EXISTS ""TBLDISCS"";CREATE TABLE ""TBLDISCS"" (""DISC_ID"" INTEGER NOT NULL AUTO_INCREMENT, ""DISC_DISC"" VARCHAR(255),""DISC_TRACK"" VARCHAR(255),""DISC_TITLE"" VARCHAR(255),""DISC_ARTIST"" VARCHAR(255),""DISC_FORMAT"" VARCHAR(255),PRIMARY KEY (""DISC_ID""));COMMIT; "; expected "INSERT, {"; SQL statement:
+IF NOT EXISTS `tblDiscs`;CREATE TABLE `tblDiscs` (`Disc_ID` INTEGER NOT NULL AUTO_INCREMENT, `Disc_Disc` VARCHAR(255),`Disc_Track` VARCHAR(255),`Disc_Title` VARCHAR(255),`Disc_Artist` VARCHAR(255),`Disc_Format` VARCHAR(255),PRIMARY KEY (`Disc_ID`));COMMIT; [42001-166]
+07-18 16:45:12 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" already exists; SQL statement:
+CREATE TABLE `tblDiscs` (`Disc_ID` INTEGER NOT NULL AUTO_INCREMENT, `Disc_Disc` VARCHAR(255),`Disc_Track` VARCHAR(255),`Disc_Title` VARCHAR(255),`Disc_Artist` VARCHAR(255),`Disc_Format` VARCHAR(255),PRIMARY KEY (`Disc_ID`));COMMIT; [42101-166]
+07-18 16:47:17 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" already exists; SQL statement:
+CREATE TABLE `tblDiscs` (`Disc_ID` INTEGER NOT NULL AUTO_INCREMENT, `Disc_Disc` VARCHAR(255),`Disc_Track` VARCHAR(255),`Disc_Title` VARCHAR(255),`Disc_Artist` VARCHAR(255),`Disc_Format` VARCHAR(255),PRIMARY KEY (`Disc_ID`));COMMIT; [42101-166]
+07-18 16:49:43 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "0" for parameter "columnIndex" [90008-166]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:215)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:2923)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:2951)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:267)
+	at ui.Main.open(Main.java:81)
+	at ui.Main.main(Main.java:61)
+07-18 16:50:11 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" already exists; SQL statement:
+CREATE TABLE `tblDiscs` (`Disc_ID` INTEGER NOT NULL AUTO_INCREMENT, `Disc_Disc` VARCHAR(255),`Disc_Track` VARCHAR(255),`Disc_Title` VARCHAR(255),`Disc_Artist` VARCHAR(255),`Disc_Format` VARCHAR(255),PRIMARY KEY (`Disc_ID`));COMMIT; [42101-166]
+07-18 16:52:41 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" already exists; SQL statement:
+CREATE TABLE `tblDiscs` (`Disc_ID` INTEGER NOT NULL AUTO_INCREMENT, `Disc_Disc` VARCHAR(255),`Disc_Track` VARCHAR(255),`Disc_Title` VARCHAR(255),`Disc_Artist` VARCHAR(255),`Disc_Format` VARCHAR(255),PRIMARY KEY (`Disc_ID`));COMMIT; [42101-166]
+07-18 16:53:26 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" already exists; SQL statement:
+CREATE TABLE `tblDiscs` (`Disc_ID` INTEGER NOT NULL AUTO_INCREMENT, `Disc_Disc` VARCHAR(255),`Disc_Track` VARCHAR(255),`Disc_Title` VARCHAR(255),`Disc_Artist` VARCHAR(255),`Disc_Format` VARCHAR(255),PRIMARY KEY (`Disc_ID`));COMMIT; [42101-166]
+07-18 16:54:50 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" already exists; SQL statement:
+CREATE TABLE `tblDiscs` (`Disc_ID` INTEGER NOT NULL AUTO_INCREMENT, `Disc_Disc` VARCHAR(255),`Disc_Track` VARCHAR(255),`Disc_Title` VARCHAR(255),`Disc_Artist` VARCHAR(255),`Disc_Format` VARCHAR(255),PRIMARY KEY (`Disc_ID`));COMMIT; [42101-166]
+07-18 21:40:43 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TBLDISCS" already exists; SQL statement:
+CREATE TABLE `tblDiscs` (`Disc_ID` INTEGER NOT NULL AUTO_INCREMENT, `Disc_Disc` VARCHAR(255),`Disc_Track` VARCHAR(255),`Disc_Title` VARCHAR(255),`Disc_Artist` VARCHAR(255),`Disc_Format` VARCHAR(255),PRIMARY KEY (`Disc_ID`));COMMIT; [42101-166]

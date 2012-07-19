@@ -29,7 +29,7 @@ public class Queries {
 			throws SQLException {
 
 		ArrayList<String> alValues = new ArrayList<String>();
-		String[][] arValues = new String[4][2];
+		String[][] arValues = new String[4][3];
 
 		arValues[0][0] = "Disc_Disc";
 		arValues[0][1] = strDisc;

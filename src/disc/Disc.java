@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import CC_Library.CC_H2;
+import CC_Library.CC_Test;
 
 public class Disc {
 	int intDiscID = 0;
@@ -15,21 +16,12 @@ public class Disc {
 	String strArtist = "";
 	String strFormat = "";
 
-	Disc(){
-		this.intDiscID = 0;
-		this.strDisc = "";
-		this.strTrack = "";
-		this.strTitle = "";
-		this.strArtist = "";
-		this.strFormat = "";
+	public Disc() {
+
 	}
 
-	public Disc(int intID) throws SQLException{
+	public Disc(int intID) throws SQLException {
 		setIntDiscID(intID);
-		this.strTitle = "";
-		this.strArtist = "";
-		this.strDisc = "";
-		this.strTrack = "";
 		CC_H2 db = new CC_H2(Variables.getStrConn(), Variables.getStrUser(),
 				Variables.getStrPassword(), CC_H2.Embedded());
 		db.Connect();
@@ -46,26 +38,72 @@ public class Disc {
 		db.Disconnect();
 		db.ClosePool();
 	}
-	
-	public void addDisc(Disc d) throws SQLException{
+
+	public void addDisc() throws SQLException {
 		CC_H2 db = new CC_H2(Variables.getStrConn(), Variables.getStrUser(),
 				Variables.getStrPassword(), CC_H2.Embedded());
 		db.Connect();
 		String strSQL = "";
-		strSQL += "INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES (" +
-				  "'" + d.getStrDisc() + "'," + d.getStrTrack() + ",'" + d.getStrTitle() + "','" + d.getStrArtist() + 
-				  "','" + d.getStrFormat() + "');";
+		strSQL += "INSERT INTO tblDiscs (Disc_Disc,Disc_Track,Disc_Title,Disc_Artist,Disc_Format) VALUES ("
+				+ "'"
+				+ this.getStrDisc()
+				+ "',"
+				+ this.getStrTrack()
+				+ ",'"
+				+ this.getStrTitle()
+				+ "','"
+				+ this.getStrArtist()
+				+ "','"
+				+ this.getStrFormat() + "');";
 		db.executeQuery(strSQL);
 		db.Disconnect();
 		db.ClosePool();
 	}
-	
-	public void deleteDisc(int intID) throws SQLException{
+
+	public void deleteDisc() throws SQLException {
 		CC_H2 db = new CC_H2(Variables.getStrConn(), Variables.getStrUser(),
 				Variables.getStrPassword(), CC_H2.Embedded());
 		db.Connect();
-		db.executeQuery("DELETE * FROM tblDiscs WHERE DISC_ID = "
-				+ intID);
+		db.executeQuery("DELETE FROM tblDiscs WHERE DISC_ID = "
+				+ this.getIntDiscID());
+		db.Disconnect();
+		db.ClosePool();
+	}
+
+	public void updateDisc() throws SQLException {
+		CC_H2 db = new CC_H2(Variables.getStrConn(), Variables.getStrUser(),
+				Variables.getStrPassword(), CC_H2.Embedded());
+		db.Connect();
+		if (!this.getStrDisc().isEmpty()) {
+			db.executeQuery("UPDATE tblDiscs SET Disc_Disc ='"
+					+ this.getStrDisc() + "' WHERE Disc_Id = " + this.getIntDiscID()
+					+ ";");
+		}
+		
+		if (!this.getStrTrack().isEmpty()) {
+			db.executeQuery("UPDATE tblDiscs SET Disc_Track ='"
+					+ this.getStrTrack() + "' WHERE Disc_Id = " + this.getIntDiscID()
+					+ ";");
+		}
+		
+		if (!this.getStrTitle().isEmpty()) {
+			db.executeQuery("UPDATE tblDiscs SET Disc_Title ='"
+					+ this.getStrTitle() + "' WHERE Disc_Id = " + this.getIntDiscID()
+					+ ";");
+		}
+		
+		if (!this.getStrArtist().isEmpty()) {
+			db.executeQuery("UPDATE tblDiscs SET Disc_Artist ='"
+					+ this.getStrArtist() + "' WHERE Disc_Id = " + this.getIntDiscID()
+					+ ";");
+		}
+		
+		if (!this.getStrFormat().isEmpty()) {
+			db.executeQuery("UPDATE tblDiscs SET Disc_Format ='"
+					+ this.getStrFormat() + "' WHERE Disc_Id = " + this.getIntDiscID()
+					+ ";");
+		}
+		
 		db.Disconnect();
 		db.ClosePool();
 	}
@@ -77,7 +115,7 @@ public class Disc {
 	public void setIntDiscID(int intDiscID) {
 		this.intDiscID = intDiscID;
 	}
-	
+
 	public String getStrTitle() {
 		return strTitle;
 	}
@@ -109,7 +147,7 @@ public class Disc {
 	public void setStrTrack(String strTrack) {
 		this.strTrack = strTrack;
 	}
-	
+
 	public String getStrFormat() {
 		return strFormat;
 	}
