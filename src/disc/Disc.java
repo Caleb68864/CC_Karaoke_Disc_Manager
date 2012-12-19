@@ -1,12 +1,10 @@
 package disc;
 
-import kdm.Variables;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import kdm.Variables;
 import CC_Library.CC_H2;
-import CC_Library.CC_Test;
 
 public class Disc {
 	int intDiscID = 0;

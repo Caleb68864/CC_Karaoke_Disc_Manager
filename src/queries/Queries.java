@@ -4,8 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import CC_Library.CC_Test;
-
 import ui.Main;
 import disc.Disc;
 

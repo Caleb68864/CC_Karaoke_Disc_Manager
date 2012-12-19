@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CC_Library"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/CC_Jars"/>
+	<classpathentry kind="lib" path="L:/xuggle-xuggler-5.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

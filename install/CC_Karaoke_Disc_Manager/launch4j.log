@@ -1,0 +1,24 @@
+
+
+CmdLine:	L:\git\CC_Karaoke_Disc_Manager\install\CC_Karaoke_Disc_Manager\CC_Karaoke_Disc_Manager.exe --l4j-debug
+WOW64:		no
+Check launcher:	 (n/a)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Ignore:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6
+Ignore:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6.0_07
+Ignore:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6.0_13
+Ignore:		SOFTWARE\JavaSoft\Java Runtime Environment\1.6.0_29
+Ignore:		SOFTWARE\JavaSoft\Java Runtime Environment\1.7
+Match:		SOFTWARE\JavaSoft\Java Runtime Environment\1.7.0_05
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.6
+Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.6.0_22
+Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.7
+Ignore:		SOFTWARE\JavaSoft\Java Development Kit\1.7.0
+Check launcher:	E:\Program Files\Java\jre7\bin\javaw.exe (OK)
+Launcher:	E:\Program Files\Java\jre7\bin\javaw.exe
+Launcher args:	-jar "L:\git\CC_Karaoke_Disc_Manager\install\CC_Karaoke_Disc_Manager\CC_Karaoke_Disc_Manager.exe"
+Args length:	97/32768 chars
+Exit code:	0

@@ -1,39 +1,26 @@
 package ui;
 
-import java.io.File;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import kdm.Variables;
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.CLabel;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
-import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Menu;
-import org.eclipse.swt.widgets.MenuItem;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.swt.widgets.TableItem;
-import org.eclipse.swt.widgets.Text;
-
-import queries.Queries;
-
-import CC_Library.CC_H2;
-import CC_Library.CC_Test;
-import disc.Disc;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.FillLayout;
-import org.eclipse.swt.custom.ScrolledComposite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.MenuItem;
+import org.eclipse.swt.widgets.Shell;
+
+import CC_Library.CC_H2;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Button;
+
+import com.xuggle.xuggler.demos.DecodeAndPlayVideo;
 
 public class Main {
 
@@ -123,12 +110,47 @@ public class Main {
 			}
 		});
 		mntmAddSong.setText("Add Song");
+		
+		MenuItem mntmExport = new MenuItem(menu_1, SWT.NONE);
+		mntmExport.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				Comp_Export_DB export_db = new Comp_Export_DB(scrolledComposite,
+						SWT.FILL);
+				scrolledComposite.setContent(export_db);
+			}
+		});
+		mntmExport.setText("Export Database");
+		
+		MenuItem mntmImport = new MenuItem(menu_1, SWT.NONE);
+		mntmImport.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				Comp_Import_DB import_db = new Comp_Import_DB(scrolledComposite,
+						SWT.FILL);
+				scrolledComposite.setContent(import_db);
+			}
+		});
+		mntmImport.setText("Import Database");
+		
+		MenuItem mntmInstallDB = new MenuItem(menu_1, SWT.NONE);
+		mntmInstallDB.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				Comp_Install_DB install_db = new Comp_Install_DB(scrolledComposite,
+						SWT.FILL);
+				scrolledComposite.setContent(install_db);
+			}
+		});
+		mntmInstallDB.setText("Install Database");
 
 		scrolledComposite = new ScrolledComposite(shlCcKaraokeDisc, SWT.BORDER
 				| SWT.H_SCROLL | SWT.V_SCROLL);
 		scrolledComposite.setExpandHorizontal(true);
 		scrolledComposite.setExpandVertical(true);
 		Comp_Main main = new Comp_Main(scrolledComposite, SWT.FILL);
+		new Label(main, SWT.NONE);
+	
 		scrolledComposite.setContent(main);
 	}
 
@@ -136,6 +158,7 @@ public class Main {
 		return scrolledComposite;
 	}
 
+	@SuppressWarnings("static-access")
 	public void setScrolledComposite(ScrolledComposite scrolledComposite) {
 		this.scrolledComposite = scrolledComposite;
 	}
